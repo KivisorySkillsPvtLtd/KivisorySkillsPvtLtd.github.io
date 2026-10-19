@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Certificate Verification | Kivisory Skills</title>
+<meta name="description" content="Kivisory Skills Pvt Ltd Certificate Verification Portal">
 
 <style>
 * {
@@ -22,7 +22,15 @@ body {
 /* Top border */
 .topline {
   height: 4px;
-  background: #168bd2;
+  background: linear-gradient(
+    90deg,
+    #9bdc45 0%,
+    #9bdc45 33.33%,
+    #159fdb 33.33%,
+    #159fdb 66.66%,
+    #ef4056 66.66%,
+    #ef4056 100%
+  );
 }
 
 /* Header */
@@ -36,7 +44,7 @@ header {
   background: #fff;
 }
 
-/* Skill India original logo */
+/* Skill India logo */
 .logo {
   display: block;
   width: 200px;
@@ -51,10 +59,21 @@ header {
   font-size: 22px;
   font-weight: bold;
   color: #0878c9;
+  line-height: 1.4;
+}
+
+.company-name span {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
 }
 
 /* Main section */
 main {
+  width: 100%;
   max-width: 1000px;
   margin: 60px auto 40px;
   padding: 20px;
@@ -105,9 +124,10 @@ main {
   min-width: 0;
 }
 
-.details h2 {
+.details h1 {
   margin: 0 0 22px;
   font-size: 28px;
+  font-weight: normal;
   color: #333;
 }
 
@@ -115,9 +135,15 @@ main {
   margin: 0;
   padding: 13px 0;
   border-bottom: 1px solid #eee;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
   overflow-wrap: anywhere;
+}
+
+.details p b {
+  display: inline-block;
+  min-width: 155px;
+  color: #555;
 }
 
 /* Footer */
@@ -128,6 +154,7 @@ footer {
   color: #666;
   font-size: 13px;
   text-align: center;
+  line-height: 1.8;
 }
 
 /* Mobile responsive */
@@ -138,12 +165,16 @@ footer {
   }
 
   .logo {
-    width: 125px;
+    width: 115px;
     height: 48px;
   }
 
   .company-name {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .company-name span {
+    font-size: 9px;
   }
 
   main {
@@ -166,12 +197,19 @@ footer {
     width: 100%;
   }
 
-  .details h2 {
+  .details h1 {
     font-size: 23px;
   }
 
   .details p {
-    font-size: 15px;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  .details p b {
+    min-width: 0;
+    display: block;
+    margin-bottom: 3px;
   }
 
   footer {
@@ -187,6 +225,11 @@ footer {
   main {
     margin-top: 35px;
   }
+
+  .topline {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
 }
 </style>
 </head>
@@ -198,12 +241,14 @@ footer {
 <header>
   <img
     class="logo"
-    src="./skill-india-big-logo(1).svg"
+    src="./skill-india-big-logo.svg"
     alt="Skill India Logo"
+    onerror="this.style.display='none';"
   >
 
   <div class="company-name">
     Kivisory Skills Pvt Ltd
+    <span>CERTIFICATE VERIFICATION PORTAL</span>
   </div>
 </header>
 
@@ -211,12 +256,12 @@ footer {
   <div class="card">
 
     <section class="status">
-      <div class="tick">✓</div>
-      <strong>Verified</strong>
+      <div class="tick" aria-hidden="true">✓</div>
+      <strong>Certificate Details</strong>
     </section>
 
     <section class="details">
-      <h2>Certificate Verification</h2>
+      <h1>Certificate Verification</h1>
 
       <p><b>Candidate Name:</b> PERIYASAMY SABARINATHAN</p>
       <p><b>Candidate ID:</b> KVS57F54B5A8D</p>
@@ -239,4 +284,3 @@ footer {
 
 </body>
 </html>
-```
