@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Certificate Verification | Kivisory Skills</title>
+<meta name="description" content="Kivisory Skills Pvt Ltd certificate verification portal.">
 
 <style>
 * {
@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #333;
   background: #fff;
 }
@@ -23,10 +23,12 @@ body {
   height: 5px;
   background: linear-gradient(
     90deg,
-    #9bdc45 33%,
-    #159fdb 33%,
-    #159fdb 66%,
-    #ef4056 66%
+    #9bdc45 0%,
+    #9bdc45 33.33%,
+    #159fdb 33.33%,
+    #159fdb 66.66%,
+    #ef4056 66.66%,
+    #ef4056 100%
   );
 }
 
@@ -42,7 +44,6 @@ header {
   background: #fff;
 }
 
-/* ORIGINAL SKILL INDIA LOGO */
 .header-left {
   display: flex;
   align-items: center;
@@ -50,6 +51,7 @@ header {
   min-width: 0;
 }
 
+/* Uploaded logo filename corrected */
 .logo-image {
   display: block;
   width: 180px;
@@ -63,6 +65,7 @@ header {
   font-weight: bold;
   font-size: 19px;
   color: #263b54;
+  line-height: 1.4;
 }
 
 .logo-text span {
@@ -71,6 +74,7 @@ header {
   color: #777;
   margin-top: 5px;
   font-weight: normal;
+  letter-spacing: 0.4px;
 }
 
 .menu {
@@ -81,8 +85,9 @@ header {
 
 /* MAIN */
 main {
+  width: 100%;
   max-width: 850px;
-  margin: 65px auto;
+  margin: 55px auto;
   padding: 20px;
 }
 
@@ -104,28 +109,43 @@ main {
   font-size: 40px;
 }
 
-.status h2 {
-  font-size: 22px;
+.status h1 {
+  font-size: 23px;
   font-weight: normal;
   color: #078bce;
-  margin: 12px 0;
+  margin: 14px 0 8px;
+}
+
+.status p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* CERTIFICATE DETAILS */
 .card {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding: 10px 20px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fff;
 }
 
 .detail {
   display: grid;
   grid-template-columns: 44% 56%;
-  padding: 13px 0;
+  gap: 8px;
+  padding: 14px 0;
   border-bottom: 1px solid #eee;
   font-size: 14px;
   line-height: 1.5;
   overflow-wrap: anywhere;
+}
+
+.detail:last-child {
+  border-bottom: none;
 }
 
 .label {
@@ -139,40 +159,55 @@ main {
 
 /* NOTICE */
 .notice {
-  margin: 28px auto 0;
+  margin: 25px auto 0;
   max-width: 600px;
   background: #fff8e7;
-  padding: 14px;
+  border: 1px solid #f1e1b7;
+  padding: 15px;
   border-radius: 5px;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #795b18;
 }
 
 /* FOOTER */
 footer {
-  margin-top: 70px;
+  margin-top: 65px;
   background: #f8f9fa;
   padding: 30px 5%;
   font-size: 13px;
   color: #555;
   line-height: 2;
+  text-align: center;
 }
 
 footer a {
+  display: inline-block;
   color: #555;
   text-decoration: none;
-  margin-right: 15px;
+  margin: 4px 9px;
 }
 
 footer a:hover {
   color: #078bce;
 }
 
+footer p {
+  margin: 15px 0 0;
+  color: #777;
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
   header {
-    padding: 13px 4%;
+    padding: 12px 4%;
     gap: 8px;
+    min-height: 75px;
   }
 
   .header-left {
@@ -180,16 +215,17 @@ footer a:hover {
   }
 
   .logo-image {
-    width: 110px;
-    height: 48px;
+    width: 100px;
+    height: 45px;
   }
 
   .logo-text {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .logo-text span {
-    font-size: 9px;
+    font-size: 8px;
+    letter-spacing: 0;
   }
 
   .menu {
@@ -201,42 +237,52 @@ footer a:hover {
     padding: 12px;
   }
 
+  .status h1 {
+    font-size: 20px;
+  }
+
   .card {
-    padding: 5px;
+    padding: 5px 12px;
   }
 
   .detail {
-    grid-template-columns: 43% 57%;
+    grid-template-columns: 42% 58%;
+    gap: 5px;
     font-size: 12px;
     padding: 12px 0;
   }
 
-  .status h2 {
-    font-size: 19px;
+  .notice {
+    font-size: 12px;
+    padding: 12px;
   }
 
   footer {
     margin-top: 40px;
-    padding: 25px 5%;
+    padding: 25px 4%;
   }
 
   footer a {
-    display: inline-block;
-    margin-right: 10px;
+    margin: 3px 6px;
   }
 }
 
 @media print {
+  .topline {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
   header {
     border-bottom: 1px solid #ddd;
   }
 
   main {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   footer {
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 </style>
@@ -249,11 +295,11 @@ footer a:hover {
 <header>
   <div class="header-left">
 
-    <!-- Keep the original SVG logo in the same folder as this HTML file -->
     <img
       class="logo-image"
-      src="./skill-india-big-logo(1).svg"
+      src="./skill-india-big-logo.svg"
       alt="Skill India Logo"
+      onerror="this.style.display='none';"
     >
 
     <div class="logo-text">
@@ -269,11 +315,12 @@ footer a:hover {
 <main>
 
   <section class="status">
-    <div class="badge">✓</div>
-    <h2>Certificate Verification</h2>
+    <div class="badge" aria-hidden="true">✓</div>
+    <h1>Certificate Verification</h1>
+    <p>Certificate details are displayed below.</p>
   </section>
 
-  <section class="card">
+  <section class="card" aria-label="Certificate details">
 
     <div class="detail">
       <div class="label">Candidate Name:</div>
@@ -328,22 +375,23 @@ footer a:hover {
   </section>
 
   <div class="notice">
-    <strong>Verification notice</strong><br>
-    This page is a website layout preview. Certificate authenticity
-    has not yet been checked. Please verify the certificate against
-    the institute's authorised records.
+    <strong>Verification Notice</strong>
+    This page displays a certificate verification layout.
+    Certificate authenticity has not been confirmed by this page.
+    Please check the institute's authorised records for verification.
   </div>
 
 </main>
 
 <footer>
-  <strong>LINKS</strong><br>
-
-  <a href="#">Home</a>
-  <a href="#">Contact Us</a>
-  <a href="#">Privacy Policy</a>
-  <a href="#">Disclaimer</a>
-  <a href="#">Terms &amp; Conditions</a>
+  <strong>LINKS</strong>
+  <div>
+    <a href="./">Home</a>
+    <a href="mailto:">Contact Us</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Terms &amp; Conditions</a>
+  </div>
 
   <p>
     © Kivisory Skills Pvt Ltd. Certificate Verification Portal.
@@ -353,12 +401,14 @@ footer a:hover {
 <script>
 const params = new URLSearchParams(window.location.search);
 
-const candidateId = params.get("id") || "Not provided";
+const candidateId = params.get("id");
 
-document.getElementById("candidateId").textContent = candidateId;
-document.getElementById("documentId").textContent = candidateId;
+document.getElementById("candidateId").textContent =
+  candidateId || "Not provided";
+
+document.getElementById("documentId").textContent =
+  candidateId || "Not provided";
 </script>
 
 </body>
 </html>
-```
