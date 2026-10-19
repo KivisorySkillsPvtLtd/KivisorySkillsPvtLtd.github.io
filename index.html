@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Certificate Verification | Kivisory Skills</title>
-<meta name="description" content="Kivisory Skills Pvt Ltd certificate verification portal.">
+<meta name="description" content="Kivisory Skills Pvt Ltd Certificate Verification Portal">
 
 <style>
 * {
@@ -19,10 +19,11 @@ body {
   background: #fff;
 }
 
+/* Top colour line */
 .topline {
   height: 5px;
   background: linear-gradient(
-    90deg,
+    to right,
     #9bdc45 0%,
     #9bdc45 33.33%,
     #159fdb 33.33%,
@@ -32,48 +33,49 @@ body {
   );
 }
 
-/* HEADER */
+/* Header */
 header {
-  min-height: 88px;
+  min-height: 90px;
   padding: 14px 5%;
   border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 18px;
   background: #fff;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
   min-width: 0;
 }
 
-/* Uploaded logo filename corrected */
+/* Skill India logo
+   Logo file is in the repository root folder */
 .logo-image {
   display: block;
   width: 180px;
-  height: 58px;
+  height: 60px;
   object-fit: contain;
   object-position: left center;
   flex-shrink: 0;
 }
 
 .logo-text {
-  font-weight: bold;
   font-size: 19px;
+  font-weight: bold;
   color: #263b54;
   line-height: 1.4;
 }
 
 .logo-text span {
   display: block;
-  font-size: 11px;
-  color: #777;
   margin-top: 5px;
+  font-size: 11px;
   font-weight: normal;
+  color: #777;
   letter-spacing: 0.4px;
 }
 
@@ -83,15 +85,15 @@ header {
   flex-shrink: 0;
 }
 
-/* MAIN */
+/* Main section */
 main {
   width: 100%;
-  max-width: 850px;
+  max-width: 1000px;
   margin: 55px auto;
   padding: 20px;
 }
 
-/* STATUS */
+/* Verification heading */
 .status {
   text-align: center;
   margin-bottom: 30px;
@@ -99,35 +101,35 @@ main {
 
 .badge {
   display: inline-flex;
-  width: 66px;
-  height: 66px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   background: #e4f5ff;
   color: #078bce;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .status h1 {
-  font-size: 23px;
+  margin: 14px 0 8px;
+  font-size: 25px;
   font-weight: normal;
   color: #078bce;
-  margin: 14px 0 8px;
 }
 
 .status p {
+  margin: 0;
   color: #777;
   font-size: 13px;
   line-height: 1.6;
-  margin: 0;
 }
 
-/* CERTIFICATE DETAILS */
+/* Certificate details */
 .card {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border: 1px solid #eee;
   border-radius: 6px;
   background: #fff;
@@ -135,12 +137,12 @@ main {
 
 .detail {
   display: grid;
-  grid-template-columns: 44% 56%;
+  grid-template-columns: 42% 58%;
   gap: 8px;
   padding: 14px 0;
   border-bottom: 1px solid #eee;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-wrap: anywhere;
 }
 
@@ -153,18 +155,19 @@ main {
 }
 
 .value {
-  font-weight: 500;
   color: #333;
+  font-weight: 500;
 }
 
-/* NOTICE */
+/* Verification notice */
 .notice {
+  max-width: 700px;
   margin: 25px auto 0;
-  max-width: 600px;
-  background: #fff8e7;
-  border: 1px solid #f1e1b7;
   padding: 15px;
+  border: 1px solid #f1e1b7;
   border-radius: 5px;
+  background: #fff8e7;
+  color: #554a31;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -175,22 +178,23 @@ main {
   color: #795b18;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   margin-top: 65px;
+  padding: 28px 5%;
   background: #f8f9fa;
-  padding: 30px 5%;
-  font-size: 13px;
+  border-top: 1px solid #eee;
   color: #555;
+  font-size: 13px;
   line-height: 2;
   text-align: center;
 }
 
 footer a {
   display: inline-block;
+  margin: 4px 9px;
   color: #555;
   text-decoration: none;
-  margin: 4px 9px;
 }
 
 footer a:hover {
@@ -198,16 +202,16 @@ footer a:hover {
 }
 
 footer p {
-  margin: 15px 0 0;
+  margin: 14px 0 0;
   color: #777;
 }
 
-/* MOBILE */
+/* Mobile layout */
 @media (max-width: 600px) {
   header {
+    min-height: 76px;
     padding: 12px 4%;
     gap: 8px;
-    min-height: 75px;
   }
 
   .header-left {
@@ -215,8 +219,8 @@ footer p {
   }
 
   .logo-image {
-    width: 100px;
-    height: 45px;
+    width: 105px;
+    height: 46px;
   }
 
   .logo-text {
@@ -238,28 +242,28 @@ footer p {
   }
 
   .status h1 {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .card {
-    padding: 5px 12px;
+    padding: 5px 13px;
   }
 
   .detail {
     grid-template-columns: 42% 58%;
     gap: 5px;
-    font-size: 12px;
     padding: 12px 0;
+    font-size: 12px;
   }
 
   .notice {
-    font-size: 12px;
     padding: 12px;
+    font-size: 12px;
   }
 
   footer {
     margin-top: 40px;
-    padding: 25px 4%;
+    padding: 24px 4%;
   }
 
   footer a {
@@ -267,6 +271,7 @@ footer p {
   }
 }
 
+/* Print layout */
 @media print {
   .topline {
     print-color-adjust: exact;
@@ -282,7 +287,7 @@ footer p {
   }
 
   footer {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 </style>
@@ -295,11 +300,11 @@ footer p {
 <header>
   <div class="header-left">
 
+    <!-- Exact logo filename uploaded to GitHub -->
     <img
       class="logo-image"
-      src="./skill-india-big-logo.svg"
+      src="/skill-india-big-logo.svg"
       alt="Skill India Logo"
-      onerror="this.style.display='none';"
     >
 
     <div class="logo-text">
@@ -376,17 +381,18 @@ footer p {
 
   <div class="notice">
     <strong>Verification Notice</strong>
-    This page displays a certificate verification layout.
-    Certificate authenticity has not been confirmed by this page.
-    Please check the institute's authorised records for verification.
+    This page displays certificate information provided in the page
+    code. Certificate authenticity has not been independently verified.
+    Please check the institute's authorised records for confirmation.
   </div>
 
 </main>
 
 <footer>
   <strong>LINKS</strong>
+
   <div>
-    <a href="./">Home</a>
+    <a href="/">Home</a>
     <a href="mailto:">Contact Us</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Disclaimer</a>
@@ -400,7 +406,6 @@ footer p {
 
 <script>
 const params = new URLSearchParams(window.location.search);
-
 const candidateId = params.get("id");
 
 document.getElementById("candidateId").textContent =
