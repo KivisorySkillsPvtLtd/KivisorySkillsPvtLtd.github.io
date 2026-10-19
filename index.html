@@ -52,8 +52,7 @@ header {
   min-width: 0;
 }
 
-/* Skill India logo
-   Logo file is in the repository root folder */
+/* Skill India logo */
 .logo-image {
   display: block;
   width: 180px;
@@ -137,7 +136,7 @@ main {
 
 .detail {
   display: grid;
-  grid-template-columns: 42% 58%;
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%);
   gap: 8px;
   padding: 14px 0;
   border-bottom: 1px solid #eee;
@@ -250,7 +249,7 @@ footer p {
   }
 
   .detail {
-    grid-template-columns: 42% 58%;
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%);
     gap: 5px;
     padding: 12px 0;
     font-size: 12px;
@@ -300,7 +299,7 @@ footer p {
 <header>
   <div class="header-left">
 
-    <!-- Exact logo filename uploaded to GitHub -->
+    <!-- Logo uploaded in the main GitHub repository folder -->
     <img
       class="logo-image"
       src="/skill-india-big-logo.svg"
