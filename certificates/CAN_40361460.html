@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +51,16 @@ header {
   object-fit: contain;
   object-position: left center;
   flex-shrink: 0;
+}
+
+.logo-fallback {
+  display: none;
+  width: 200px;
+  min-height: 60px;
+  align-items: center;
+  color: #0878c9;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .company-name {
@@ -173,7 +184,8 @@ footer {
     gap: 12px;
   }
 
-  .logo {
+  .logo,
+  .logo-fallback {
     width: 115px;
     height: 48px;
   }
@@ -241,7 +253,12 @@ footer {
     class="logo"
     src="../skill-india-big-logo.svg"
     alt="Skill India Logo"
+    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
   >
+
+  <div class="logo-fallback" aria-label="Skill India logo unavailable">
+    Skill India
+  </div>
 
   <div class="company-name">
     Kivisory Skills Pvt Ltd
@@ -287,3 +304,4 @@ footer {
 
 </body>
 </html>
+```
