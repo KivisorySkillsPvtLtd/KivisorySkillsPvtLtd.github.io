@@ -1,9 +1,10 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Certificate Verification | Kivisory Skills</title>
 
 <style>
@@ -18,27 +19,50 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 12px 26px;
   border-top: 4px solid #168bd2;
-  padding: 20px 26px;
   border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Original uploaded Skill India logo */
+.logo {
+  display: block;
+  width: 202px;
+  height: 55px;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+
+/* Company name */
+.company-name {
   color: #0878c9;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
+/* Main content */
 main {
   max-width: 1000px;
-  margin: 70px auto 40px;
+  margin: 65px auto 40px;
   padding: 20px;
 }
 
 .card {
   display: flex;
-  gap: 35px;
   align-items: flex-start;
+  gap: 35px;
 }
 
+/* Verification status */
 .status {
   color: #078bce;
   flex: 0 0 180px;
@@ -57,6 +81,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+
   clip-path: polygon(
     50% 0%, 62% 12%, 78% 7%, 83% 23%,
     98% 30%, 92% 46%, 100% 60%, 85% 70%,
@@ -72,6 +97,7 @@ main {
   font-size: 14px;
 }
 
+/* Certificate details */
 .details {
   flex: 1;
   min-width: 0;
@@ -92,6 +118,7 @@ main {
   overflow-wrap: anywhere;
 }
 
+/* Footer */
 footer {
   margin-top: 60px;
   padding: 20px;
@@ -101,7 +128,22 @@ footer {
   text-align: center;
 }
 
+/* Mobile responsive */
 @media (max-width: 600px) {
+  header {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
   main {
     margin: 25px auto;
     padding: 15px;
@@ -129,12 +171,41 @@ footer {
   .details p {
     font-size: 15px;
   }
+
+  footer {
+    margin-top: 35px;
+  }
+}
+
+@media print {
+  header {
+    border-top: 4px solid #168bd2;
+  }
+
+  main {
+    margin-top: 35px;
+  }
+
+  footer {
+    margin-top: 35px;
+  }
 }
 </style>
 </head>
 
 <body>
-<header>Kivisory Skills Pvt Ltd</header>
+
+<header>
+  <img
+    class="logo"
+    src="skill-india-big-logo(1).svg"
+    alt="Skill India Logo"
+  >
+
+  <div class="company-name">
+    Kivisory Skills Pvt Ltd
+  </div>
+</header>
 
 <main>
   <div class="card">
@@ -156,7 +227,7 @@ footer {
       <p><b>Grade:</b> A</p>
       <p><b>Result:</b> PASS</p>
       <p><b>Issue Date:</b> 12-10-2026</p>
-      <p><b>Tyoe:</b> Certificate</p>
+      <p><b>Type:</b> Certificate</p>
     </section>
 
   </div>
@@ -165,6 +236,7 @@ footer {
 <footer>
   Certificate Verification Portal | Kivisory Skills Pvt Ltd
 </footer>
+
 </body>
 </html>
-
+```
