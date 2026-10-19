@@ -98,7 +98,7 @@ main {
   text-align: center;
 }
 
-/* Blue verification badge */
+/* Instagram-style blue badge */
 .tick {
   width: 55px;
   height: 55px;
@@ -110,6 +110,7 @@ main {
   color: #fff;
   font-size: 35px;
   font-weight: bold;
+  line-height: 1;
   clip-path: polygon(
     50% 0%,
     61% 8%,
@@ -163,4 +164,165 @@ main {
   margin: 0;
   padding: 13px 0;
   border-bottom: 1px solid #eee;
-  font-size: 
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.details p b {
+  color: #555;
+}
+
+/* Notice */
+.notice {
+  max-width: 700px;
+  margin: 28px auto 0;
+  padding: 14px;
+  background: #fff8e7;
+  border: 1px solid #f1e1b7;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #795b18;
+}
+
+/* Footer */
+footer {
+  margin-top: 55px;
+  padding: 22px;
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .logo,
+  .logo-fallback {
+    width: 115px;
+    height: 48px;
+  }
+
+  .company-name {
+    font-size: 14px;
+  }
+
+  .company-name span {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+
+  main {
+    margin: 25px auto;
+    padding: 15px;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .status {
+    width: 100%;
+    flex-basis: auto;
+    padding: 10px;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .details h1 {
+    font-size: 23px;
+  }
+
+  .details p {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  footer {
+    margin-top: 35px;
+  }
+}
+
+@media print {
+  .topline,
+  .tick {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline"></div>
+
+<header>
+  <img
+    class="logo"
+    src="../skill-india-big-logo.svg"
+    alt="Skill India Logo"
+    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+  >
+
+  <div class="logo-fallback" aria-label="Skill India logo unavailable">
+    Skill India
+  </div>
+
+  <div class="company-name">
+    Kivisory Skills Pvt Ltd
+    <span>CERTIFICATE VERIFICATION PORTAL</span>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+
+    <section class="status">
+      <div class="tick" aria-hidden="true">✓</div>
+      <strong>Certificate Details</strong>
+    </section>
+
+    <section class="details">
+      <h1>Certificate Verification</h1>
+
+      <p><b>Candidate Name:</b><span>PERIYASAMY SABARINATHAN</span></p>
+      <p><b>Candidate ID:</b><span>KVS57F54B5A8D</span></p>
+      <p><b>Sector Name:</b><span>PLUMBING</span></p>
+      <p><b>QP Name:</b><span>ASSISTANT SHUTTERING CARPENTER</span></p>
+      <p><b>QP Code:</b><span>CON/Q0302</span></p>
+      <p><b>QP Version:</b><span>3.0</span></p>
+      <p><b>Grade:</b><span>A</span></p>
+      <p><b>Result:</b><span>PASS</span></p>
+      <p><b>Issue Date:</b><span>12-10-2026</span></p>
+      <p><b>Type:</b><span>Certificate</span></p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  Certificate Verification Portal | Kivisory Skills Pvt Ltd
+</footer>
+
+</body>
+</html>
+```
